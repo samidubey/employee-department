@@ -60,6 +60,10 @@ public class EmployeeJDBCTemplateDao implements EmployeeDao {
 		String query = "SELECT * FROM employee WHERE e_id=?";
 		return template.queryForObject(query, new Object[] { id }, new EmployeeRowMapper());
 	}
+
+	public void test() {
+
+	}
 }
 
 class EmployeeRowMapper implements RowMapper<Employee> {
@@ -79,5 +83,4 @@ class EmployeeRowMapper implements RowMapper<Employee> {
 
 		return emp;
 	}
-
 }
