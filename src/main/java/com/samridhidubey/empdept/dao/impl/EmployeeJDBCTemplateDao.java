@@ -61,9 +61,6 @@ public class EmployeeJDBCTemplateDao implements EmployeeDao {
 		return template.queryForObject(query, new Object[] { id }, new EmployeeRowMapper());
 	}
 
-	public void test() {
-
-	}
 }
 
 class EmployeeRowMapper implements RowMapper<Employee> {
