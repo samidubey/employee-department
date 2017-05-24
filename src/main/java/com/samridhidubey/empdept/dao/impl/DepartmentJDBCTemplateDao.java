@@ -21,7 +21,7 @@ public class DepartmentJDBCTemplateDao implements DepartmentDao {
 	@Override
 	public Boolean create(Department department) {
 		Assert.notNull(department, "Department cannot be null while creating.");
-		String query = "INSERT INTO department(d_name,d_details) VALUES(?,?,?)";
+		String query = "INSERT INTO department(d_name,d_details) VALUES(?,?)";
 		int result = template.update(query, department.getName(), department.getDetails());
 		return (result > 0);
 	}
